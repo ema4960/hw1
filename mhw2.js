@@ -1,7 +1,4 @@
 
-let buttonLogin = document.querySelector("#login_button");
-buttonLogin.addEventListener("click", onClickLogin);
-let start =true;
 
 let city = document.querySelector("#city");
 city.addEventListener("blur",changeCity);
@@ -33,6 +30,11 @@ function onJson(json){
     console.log(json);
 }
 
+
+let buttonLogin = document.querySelector("#login_button");
+buttonLogin.addEventListener("click", onClickLogin);
+let start =true;
+
 function onClickLogin(){
     let loginds = document.querySelector("#loginds");
     loginds.classList.remove("displayNone");
@@ -48,8 +50,16 @@ function onClickLogin(){
         shadow.classList.remove("displayNone");
         shadow.classList.add("displayFixed");
     }
+}
 
-    
+
+let mailButton = document.querySelector("#mailBt");
+mailButton.addEventListener("click", onClickMailBt);
+
+function onClickMailBt(){
+    let mail = document.querySelector("#mailInput").value;
+    console.log(mail);
+    fetch("http://localhost/dbConnect.php").then(onResponse)
 }
 
 let closeLogin = document.querySelector("#closeLogin");

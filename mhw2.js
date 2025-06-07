@@ -59,7 +59,7 @@ mailButton.addEventListener("click", onClickMailBt);
 function onClickMailBt(){
     let mail = document.querySelector("#mailInput").value;
     console.log(mail);
-    fetch("http://localhost/dbConnect.php").then(onResponse)
+    //fetch("http://localhost/dbConnect.php").then(onResponse)
 }
 
 let closeLogin = document.querySelector("#closeLogin");

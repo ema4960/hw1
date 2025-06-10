@@ -13,7 +13,7 @@
             <button   class="burger">
                 <img src="../burger.svg" alt="" srcset="">
             </button>
-            <a href="../index.php"><img src="../logo_autoscout.svg" alt="" srcset=""></a>
+            <a href="/hw1/index.php"><img src="/hw1/logo_autoscout.svg" alt="" srcset=""></a>
             <nav class="header_nav_left">
                 <button id="button1"><p>Ricerca</p> <img id="img1" src="/hw1/scorri-giù-white.png"></button>
                 <button id="button2"><p>Vendi</p><img id="img2" src="/hw1/scorri-giù-white.png"></button>
@@ -73,19 +73,30 @@
         </div>
 
         <div id="register" class="displayNone log">
-            <img src="/hw1/logo_autoscoutblack.svg" alt="" srcset=""><img src="/hw1/XcloseLog.svg" id="closeRegister" alt="" srcset="">
+            <img src="logo_autoscoutblack.svg" alt="" srcset=""><img src="XcloseLog.svg" id="closeRegister" alt="" srcset="">
             <h2>Effettua la registrazione</h2> 
             <p>Registrati e salva tutte le ricerche in un unico posto.</p>
-            <div>
-                <label>username</label>
-                <input id="userInput" type="text" type="username" placeholder="">
-                <label>email</label>
-                <input id="mailInput" type="text" type="email" placeholder="Es. mariorossi@Example.com">
-                <label>password</label>
-                <input id="passwordInput" type="text" type="password" placeholder="password">
-                <button class="yellowButton">Register</button>
-            </div>
+            <form action="/hw1/scriptPhp/register.php" method="post">
+                <section>
+                    <label>username:</label>
+                    <input name="username" type="text"  placeholder="">
+                </section>
+                <section>
+                    <label>email:</label>
+                    <input name="email" type="email" placeholder="Es. mariorossi@Example.com">
+                </section>
+                <section>
+                    <label >password:</label>
+                    <input name="password" type="password"  placeholder="">
+                </section>
+                <section>
+                    <input type="submit" value="Registrati" />  
+                </section>
+                
+                
+            </form>
         </div>
+
 
         <section class="contenuto">
             <div class="title"><h1>Migliori Auto</h1></div>

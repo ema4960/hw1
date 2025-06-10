@@ -77,14 +77,25 @@
             <img src="logo_autoscoutblack.svg" alt="" srcset=""><img src="XcloseLog.svg" id="closeRegister" alt="" srcset="">
             <h2>Effettua la registrazione</h2> 
             <p>Registrati e salva tutte le ricerche in un unico posto.</p>
-            <div>
-                <label>username</label>
-                <input id="userInputnn" type="text" type="username" placeholder="">
-                <label>email</label>
-                <input id="mailInputnn" type="text" type="email" placeholder="Es. mariorossi@Example.com">
-                <label>password</label>
-                <button class="yellowButton">Register</button>
-            </div>
+            <form action="/hw1/scriptPhp/register.php" method="post">
+                <section>
+                    <label>username:</label>
+                    <input name="username" type="text"  placeholder="">
+                </section>
+                <section>
+                    <label>email:</label>
+                    <input name="email" type="email" placeholder="Es. mariorossi@Example.com">
+                </section>
+                <section>
+                    <label >password:</label>
+                    <input name="password" type="password"  placeholder="">
+                </section>
+                <section>
+                    <input type="submit" value="Registrati" />  
+                </section>
+                
+                
+            </form>
         </div>
 
 
@@ -171,6 +182,23 @@
                 <p>Pubbiclità</p>
                 <img src="pubblicitaAS_desktop.jpeg" alt="">
             </div>
+
+            <h4>Ultimi risultati della tua ultima ricerca</h4>
+            <div class="ultime_ricerche">
+                <div id="ultima_ricerca1" >
+                    <img src="" alt="">
+                    <h4>Toyota Land Cruiser</h4>
+                    <p>€ 16.900</p>
+                    <button class="salvaRicerca" data-index-number="1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" data-testid="favorite-icon" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M22.434 9.234A1.995 1.995 0 0020.586 8h-4.893l-1.82-4.854A1.982 1.982 0 0012 1.849c-.843 0-1.577.509-1.873 1.297L8.307 8H3.414c-.811 0-1.537.484-1.848 1.234-.311.75-.14 1.606.434 2.18.031.031.063.06.099.086l3.795 2.911-1.103 5.304A1.965 1.965 0 005.68 21.9c.331.205.695.307 1.057.307.461 0 .918-.165 1.296-.489l3.968-3.4 3.967 3.399c.676.58 1.601.65 2.354.184.756-.467 1.104-1.324.898-2.147l-1.111-5.342 3.794-2.911a1 1 0 00.099-.086 2.001 2.001 0 00.432-2.181zm-6.042 3.973a1 1 0 00-.371.997l1.248 5.994-4.619-3.958a.997.997 0 00-1.3 0l-4.61 3.921 1.239-5.957a1 1 0 00-.371-.997L3.429 10H9c.417 0 .79-.259.937-.648l2.06-5.514.004.01v.001l2.063 5.503A1 1 0 0015 10h5.571l-4.179 3.207z"></path></svg></button>
+                </div>
+                <div id="ultima_ricerca1" >
+                    <img src="/hw1/UltimeRic_nissanGTR.jpg" alt="">
+                    <h4>Toyota Land Cruiser</h4>
+                    <p>€ 16.900</p>
+                    <button class="salvaRicerca" data-index-number="2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" data-testid="favorite-icon" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M22.434 9.234A1.995 1.995 0 0020.586 8h-4.893l-1.82-4.854A1.982 1.982 0 0012 1.849c-.843 0-1.577.509-1.873 1.297L8.307 8H3.414c-.811 0-1.537.484-1.848 1.234-.311.75-.14 1.606.434 2.18.031.031.063.06.099.086l3.795 2.911-1.103 5.304A1.965 1.965 0 005.68 21.9c.331.205.695.307 1.057.307.461 0 .918-.165 1.296-.489l3.968-3.4 3.967 3.399c.676.58 1.601.65 2.354.184.756-.467 1.104-1.324.898-2.147l-1.111-5.342 3.794-2.911a1 1 0 00.099-.086 2.001 2.001 0 00.432-2.181zm-6.042 3.973a1 1 0 00-.371.997l1.248 5.994-4.619-3.958a.997.997 0 00-1.3 0l-4.61 3.921 1.239-5.957a1 1 0 00-.371-.997L3.429 10H9c.417 0 .79-.259.937-.648l2.06-5.514.004.01v.001l2.063 5.503A1 1 0 0015 10h5.571l-4.179 3.207z"></path></svg></button>
+                </div>
+            </div>
+
 
             <div class="benvenuto">
                 <p>Trova l’auto dei tuoi sogni con AutoScout24, il più grande sito internet di annunci auto in Europa!</p>

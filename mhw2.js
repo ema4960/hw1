@@ -104,6 +104,17 @@ function onClickLoginBt(){
     })
 }
 
+fetch("http://localhost/hw1/scriptPhp/searchCar.php?id=1").then((response) => response.json()).then(data => {
+    console.log(data.modello);
+    let ricerca = document.querySelector("#ultima_ricerca1 button");
+    ricerca.dataset.value= data.id;
+    let img = document.querySelector("#ultima_ricerca1 img");
+    img.src = data.percorsoFoto;
+    let title = document.querySelector("#ultima_ricerca1 h4");
+    title.textContent= data.marca+" "+data.modello;
+    
+})
+
 fetch("http://localhost/hw1/scriptPhp/onSession.php").then((response) => {return response.text()}).then((data) => {
     console.log(data);
     if(data==1){
@@ -367,3 +378,41 @@ function onClickBt4 (){
     }
 }
 
+
+let button = document.querySelectorAll(".salvaRicerca");
+button.forEach(function(but){
+    
+    but.addEventListener("click", ()=> {
+        
+        console.log(but.dataset.indexNumber);
+        let logged;
+        fetch("http://localhost/hw1/scriptPhp/onSession.php").then((response) => {return response.text()}).then((data) =>{
+            logged = data;
+            console.log("loggato"+logged);
+
+            if(logged==1){
+                
+                fetch("http://localhost/hw1/scriptPhp/favoriteAddRem.php?id="+but.dataset.indexNumber).then((response) => {return response.text()}).then((data) =>{
+                    if(data){
+                        but.classList.add("backgroundBlack");
+                    }else{
+                        but.classList.remove("backgroundBlack");
+                    }
+                });
+            }else{
+                console.log("devi essere loggato per mettere nei preferiti");
+            }
+        });
+
+        
+       
+    
+
+    })
+    
+    });
+
+
+
+
+    

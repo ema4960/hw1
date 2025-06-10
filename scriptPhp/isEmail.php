@@ -1,7 +1,7 @@
 <?php
 include 'dbConnect.php';
 
-$mail = mysqli_real_escape_string($conn,$_GET["email"]);
+$mail = $_GET["email"];
 if($mail!=""){
     $query = "SELECT email FROM users WHERE email='".$mail."'";
     $result = mysqli_query($conn, $query) or die ("errore: ".mysqli_error($conn)); 
